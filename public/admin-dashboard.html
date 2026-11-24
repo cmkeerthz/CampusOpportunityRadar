@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard - Opportunity Radar</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <div class="logo">
+            Opportunity<span>Radar</span>
+        </div>
+
+        <nav>
+            <a href="index.html">Explore</a>
+            <a href="#" id="logoutLink">Logout</a>
+        </nav>
+
+    </header>
+
+
+    <main class="container">
+
+        <section class="dashboard-header">
+
+            <p class="eyebrow">ADMIN DASHBOARD</p>
+
+            <h1>
+                Manage Opportunities
+            </h1>
+
+            <p>
+                Add, edit, and delete student opportunities.
+            </p>
+
+        </section>
+
+
+        <section class="admin-section">
+
+            <h2>Add New Opportunity</h2>
+
+            <form id="opportunityForm">
+
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input
+                        type="text"
+                        id="title"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="organization">Organization</label>
+                    <input
+                        type="text"
+                        id="organization"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="category">Category</label>
+                    <select id="category" required>
+                        <option value="">Select Category</option>
+                        <option value="Internship">Internship</option>
+                        <option value="Hackathon">Hackathon</option>
+                        <option value="Workshop">Workshop</option>
+                        <option value="Competition">Competition</option>
+                        <option value="Certification">Certification</option>
+                    </select>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea
+                        id="description"
+                        required
+                    ></textarea>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="location">Location</label>
+                    <input
+                        type="text"
+                        id="location"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="deadline">Deadline</label>
+                    <input
+                        type="date"
+                        id="deadline"
+                        required
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="skills">
+                        Skills (comma separated)
+                    </label>
+
+                    <input
+                        type="text"
+                        id="skills"
+                        placeholder="JavaScript, React, Python"
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="branches">
+                        Eligible Branches (comma separated)
+                    </label>
+
+                    <input
+                        type="text"
+                        id="branches"
+                        placeholder="CSE, IT, AI&DS"
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="years">
+                        Eligible Years (comma separated)
+                    </label>
+
+                    <input
+                        type="text"
+                        id="years"
+                        placeholder="1, 2, 3, 4"
+                    >
+                </div>
+
+
+                <div class="form-group">
+                    <label for="applicationUrl">
+                        Application URL
+                    </label>
+
+                    <input
+                        type="url"
+                        id="applicationUrl"
+                        placeholder="https://example.com"
+                    >
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="primary-button"
+                >
+                    Add Opportunity
+                </button>
+
+            </form>
+
+
+            <p id="adminMessage"></p>
+
+        </section>
+
+
+        <section class="admin-section">
+
+            <h2>Existing Opportunities</h2>
+
+            <div id="adminOpportunityContainer">
+
+                <p>
+                    Loading opportunities...
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="js/admin-dashboard.js"></script>
+
+</body>
+
+</html>

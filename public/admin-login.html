@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Login - Opportunity Radar</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <main class="login-page">
+
+        <div class="login-card">
+
+            <p class="eyebrow">CAMPUS OPPORTUNITY RADAR</p>
+
+            <h1>Admin Login</h1>
+
+            <p class="login-subtitle">
+                Manage campus opportunities and applications.
+            </p>
+
+            <form id="adminLoginForm">
+
+                <label>Email</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="admin@campus.com"
+                    required
+                >
+
+                <label>Password</label>
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter your password"
+                    required
+                >
+
+                <button type="submit">
+                    Login as Admin
+                </button>
+
+            </form>
+
+            <p id="loginMessage"></p>
+
+            <div class="login-links">
+                <a href="user-login.html">Student Login</a>
+                <a href="index.html">Back to Explore</a>
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="js/admin-login.js"></script>
+
+</body>
+
+</html>

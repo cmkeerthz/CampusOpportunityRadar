@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Dashboard - Campus Opportunity Radar</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <div class="logo">
+            Opportunity<span>Radar</span>
+        </div>
+
+        <nav>
+
+            <a href="student-dashboard.html">Dashboard</a>
+
+            <a href="index.html">Explore</a>
+
+            <a href="#">My Applications</a>
+
+            <a href="#">Saved</a>
+
+            <button id="logoutButton" class="logout-button">
+                Logout
+            </button>
+
+        </nav>
+
+    </header>
+
+
+    <main class="container">
+
+        <section class="dashboard-hero">
+
+            <p class="eyebrow">
+                STUDENT DASHBOARD
+            </p>
+
+            <h1>
+                Welcome, <span id="studentName">Student</span>.
+            </h1>
+
+            <p class="hero-text">
+                Discover opportunities that match your skills,
+                interests and academic profile.
+            </p>
+
+        </section>
+
+
+        <section class="dashboard-stats">
+
+            <div class="stat-card">
+
+                <p>Available Opportunities</p>
+
+                <h2 id="totalOpportunities">
+                    0
+                </h2>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <p>Saved Opportunities</p>
+
+                <h2 id="savedCount">
+                    0
+                </h2>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <p>Applications</p>
+
+                <h2 id="applicationCount">
+                    0
+                </h2>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <p>Deadlines Soon</p>
+
+                <h2 id="deadlineCount">
+                    0
+                </h2>
+
+            </div>
+
+        </section>
+
+
+        <section class="opportunity-section">
+
+            <div class="section-header">
+
+                <div>
+
+                    <p class="eyebrow">
+                        FOR YOU
+                    </p>
+
+                    <h2>
+                        Explore Opportunities
+                    </h2>
+
+                </div>
+
+                <a href="index.html" class="view-all">
+                    View All
+                </a>
+
+            </div>
+
+
+            <div
+                id="dashboardOpportunityContainer"
+                class="opportunity-grid"
+            >
+
+                <!-- Opportunities will appear here -->
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+[
+  {
+    "id": 1,
+    "name": "Student User",
+    "email": "student@example.com",
+    "password": "student123",
+    "role": "student"
+  },
+  {
+    "id": 2,
+    "name": "Admin User",
+    "email": "admin@example.com",
+    "password": "admin123",
+    "role": "admin"
+  },
+  {
+    "id": 3,
+    "name": "Keerthu",
+    "email": "24ad057@kpriet.ac.in",
+    "password": "student123",
+    "role": "student",
+    "branch": "AI&DS",
+    "year": 3,
+    "skills": [
+      "JavaScript",
+      "Python",
+      "React"
+    ],
+    "interests": [
+      "Web Development",
+      "AI"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "dilip",
+    "email": "24ad029@kpriet.ac.in",
+    "password": "student123",
+    "role": "student",
+    "branch": "IT",
+    "year": 2,
+    "skills": [
+      "python",
+      "react"
+    ],
+    "interests": [
+      "ai"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Keerthu",
+    "email": "keerthu@test.com",
+    "password": "123456",
+    "role": "student",
+    "branch": "AI&DS",
+    "year": 3,
+    "skills": [
+      "JavaScript",
+      "Python",
+      "React"
+    ],
+    "interests": [
+      "Web Development",
+      "AI",
+      "Hackathons"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Keerthu Test",
+    "email": "keerthu.test2026@example.com",
+    "password": "RadarTest@2026",
+    "role": "student",
+    "branch": "CSE",
+    "year": 3,
+    "skills": [
+      "JavaScript",
+      "React",
+      "Python",
+      "SQL"
+    ],
+    "interests": [
+      "Web Development",
+      "Data Science",
+      "Hackathons"
+    ]
+  }
+]

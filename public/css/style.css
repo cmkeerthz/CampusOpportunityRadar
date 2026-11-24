@@ -1,0 +1,791 @@
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 450px;
+    background: white;
+    border: 1px solid #e5e5e5;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+}
+
+.login-card h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.login-subtitle {
+    color: #777;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.login-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.login-card label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.login-card input {
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.login-card button {
+    margin-top: 20px;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: #5b4bdb;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.login-card button:hover {
+    opacity: 0.9;
+}
+
+#loginMessage {
+    margin-top: 15px;
+    color: #d33;
+    font-size: 14px;
+}
+
+.login-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.login-links a {
+    color: #5b4bdb;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f7f5;
+    color: #171717;
+}
+
+.navbar {
+    height: 70px;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #e5e5e5;
+    background: white;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.logo span {
+    color: #5b4bdb;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 28px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #555;
+    font-size: 14px;
+}
+
+.container {
+    width: 86%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.hero {
+    padding: 90px 0 70px;
+}
+
+.eyebrow {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #5b4bdb;
+    margin-bottom: 14px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 6vw, 72px);
+    line-height: 1.05;
+    letter-spacing: -3px;
+}
+
+.hero h1 span {
+    color: #5b4bdb;
+}
+
+.hero-text {
+    max-width: 600px;
+    margin-top: 25px;
+    color: #666;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.opportunity-section {
+    padding-bottom: 80px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 25px;
+}
+
+.section-header h2 {
+    font-size: 30px;
+}
+
+#opportunityCount {
+    color: #777;
+    font-size: 14px;
+}
+
+.search-area {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.search-area input,
+.search-area select {
+    padding: 14px 16px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: white;
+    font-size: 14px;
+}
+
+.search-area input {
+    flex: 1;
+}
+
+.opportunity-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border: 1px solid #e7e7e7;
+    border-radius: 16px;
+    padding: 24px;
+    transition: 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+}
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 20px;
+}
+
+.badge {
+    background: #f0edff;
+    color: #5b4bdb;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.card h3 {
+    font-size: 21px;
+    margin-bottom: 8px;
+}
+
+.organization {
+    color: #777;
+    font-size: 14px;
+}
+
+.description {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 18px 0;
+}
+
+.card-footer {
+    border-top: 1px solid #eee;
+    padding-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+}
+
+.deadline {
+    font-weight: 600;
+}
+
+@media (max-width: 700px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .navbar nav {
+        display: none;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    .opportunity-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .search-area {
+        flex-direction: column;
+    }
+}
+.admin-section {
+    padding-bottom: 100px;
+}
+
+.opportunity-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    background: white;
+    border: 1px solid #e7e7e7;
+    border-radius: 16px;
+    padding: 24px;
+}
+
+.opportunity-form input,
+.opportunity-form select,
+.opportunity-form textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.opportunity-form textarea {
+    min-height: 120px;
+    resize: vertical;
+    grid-column: 1 / -1;
+}
+
+.opportunity-form button {
+    border: none;
+    background: #5b4bdb;
+    color: white;
+    padding: 14px 20px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.opportunity-form button:hover {
+    opacity: 0.9;
+}
+
+#formMessage {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+@media (max-width: 700px) {
+
+    .opportunity-form {
+        grid-template-columns: 1fr;
+    }
+}
+/* =========================
+   STUDENT DASHBOARD
+   ========================= */
+
+.dashboard-hero {
+    padding: 70px 0 40px;
+}
+
+.dashboard-hero h1 {
+    font-size: clamp(40px, 6vw, 64px);
+    line-height: 1.05;
+    letter-spacing: -2px;
+}
+
+.dashboard-hero h1 span {
+    color: #5b4bdb;
+}
+
+.dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 70px;
+}
+
+.stat-card {
+    background: white;
+    border: 1px solid #e7e7e7;
+    border-radius: 16px;
+    padding: 24px;
+}
+
+.stat-card p {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.stat-card h2 {
+    font-size: 32px;
+}
+
+.view-all {
+    text-decoration: none;
+    color: #5b4bdb;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.logout-button {
+    border: none;
+    background: transparent;
+    color: #555;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.logout-button:hover {
+    color: #5b4bdb;
+}
+
+
+@media (max-width: 900px) {
+
+    .dashboard-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .dashboard-stats {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* =========================
+   SIGNUP / AUTH PAGE
+   ========================= */
+
+.auth-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 650px;
+    background: white;
+    border: 1px solid #e5e5e5;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+}
+
+.auth-card h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.auth-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.auth-card label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.auth-card input,
+.auth-card select {
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.auth-card button {
+    margin-top: 20px;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: #5b4bdb;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.auth-card button:hover {
+    opacity: 0.9;
+}
+
+.auth-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.auth-links a {
+    color: #5b4bdb;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+#signupMessage {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+@media (max-width: 700px) {
+    .auth-page {
+        padding: 20px;
+    }
+
+    .auth-card {
+        padding: 25px;
+    }
+}
+/* ================================
+   ADMIN DASHBOARD
+================================ */
+
+.dashboard-header {
+    margin-bottom: 35px;
+}
+
+.dashboard-header h1 {
+    margin-bottom: 8px;
+}
+
+.dashboard-header p {
+    color: #666;
+}
+
+
+/* Admin sections */
+
+.admin-section {
+    background: #ffffff;
+    padding: 28px;
+    margin-bottom: 35px;
+    border-radius: 16px;
+    border: 1px solid #e5e5e5;
+}
+
+.admin-section h2 {
+    margin-bottom: 22px;
+}
+
+
+/* Admin form */
+
+#opportunityForm {
+    display: grid;
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 11px 13px;
+    border: 1px solid #d8d8d8;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #5b4bdb;
+}
+
+
+/* Add button */
+
+.primary-button {
+    width: fit-content;
+    padding: 11px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #5b4bdb;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.primary-button:hover {
+    opacity: 0.9;
+}
+
+
+/* Admin message */
+
+#adminMessage {
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* Existing opportunity cards */
+
+#adminOpportunityContainer {
+    display: grid;
+    gap: 18px;
+}
+
+#adminOpportunityContainer .card {
+    margin: 0;
+}
+
+.admin-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.admin-actions button {
+    padding: 8px 14px;
+    border: 1px solid #d5d5d5;
+    border-radius: 7px;
+    background: white;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.admin-actions button:hover {
+    background: #f5f5f5;
+}
+.view-details {
+    display: inline-block;
+    margin-top: 18px;
+    color: #5b4bdb;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.view-details:hover {
+    text-decoration: underline;
+}
+/* ================================
+   OPPORTUNITY DETAILS PAGE
+================================ */
+
+.details-page {
+    padding: 35px 0 60px;
+}
+
+.details-card {
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 18px;
+    padding: 35px;
+    margin-top: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
+}
+
+.details-card h1 {
+    margin: 12px 0 6px;
+    font-size: 36px;
+}
+
+.details-card .organization {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 22px 0;
+    border-top: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.details-grid strong {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+.details-grid p {
+    margin: 0;
+    color: #555;
+}
+
+.details-section {
+    margin-top: 28px;
+}
+
+.details-section h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.details-section p {
+    color: #555;
+    line-height: 1.7;
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tag {
+    display: inline-block;
+    padding: 7px 12px;
+    border-radius: 20px;
+    background: #f0edff;
+    color: #5b4bdb;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.details-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 35px;
+}
+
+.apply-button,
+.back-button {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.apply-button {
+    background: #5b4bdb;
+    color: white;
+}
+
+.apply-button:hover {
+    opacity: 0.9;
+}
+
+.back-button {
+    border: 1px solid #d5d5d5;
+    color: #333;
+    background: white;
+}
+
+.back-button:hover {
+    background: #f7f7f7;
+}
+
+
+/* Mobile layout */
+
+@media (max-width: 700px) {
+
+    .details-card {
+        padding: 22px;
+    }
+
+    .details-card h1 {
+        font-size: 28px;
+    }
+
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .details-actions {
+        flex-direction: column;
+    }
+
+    .apply-button,
+    .back-button {
+        text-align: center;
+    }
+}

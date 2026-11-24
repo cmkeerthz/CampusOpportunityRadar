@@ -1,0 +1,125 @@
+[
+  {
+    "id": 1,
+    "title": "AI Innovation Hackathon 2026",
+    "organization": "TechNova",
+    "category": "Hackathon",
+    "description": "Participate in a hands-on innovation hackathon focused on solving real-world problems using Artificial Intelligence and modern programming techniques. Participants can identify a practical problem, design an innovative solution, develop a working prototype, and present their approach to a panel of judges. The event provides an opportunity to improve problem-solving, teamwork, programming, and presentation skills while applying AI concepts to practical scenarios.",
+    "location": "Online",
+    "deadline": "2026-09-15",
+    "skills": [
+      "Python",
+      "Artificial Intelligence"
+    ],
+    "eligibleBranches": [
+      "CSE",
+      "IT",
+      "AI&DS"
+    ],
+    "eligibleYears": [
+      2,
+      3,
+      4
+    ],
+    "applicationUrl": "https://example.com/apply"
+  },
+  {
+    "id": 2,
+    "title": "Frontend Development Internship",
+    "organization": "WebCraft Solutions",
+    "category": "Internship",
+    "description": "This internship provides students with practical experience in developing modern web applications. Interns will work with HTML, CSS, JavaScript, and frontend frameworks such as React to create responsive and user-friendly interfaces. The program focuses on understanding real-world development workflows, improving frontend coding skills, working with reusable components, and gaining experience in building applications that solve practical business requirements.",
+    "location": "Chennai",
+    "deadline": "2026-09-20",
+    "skills": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React"
+    ],
+    "eligibleBranches": [
+      "CSE",
+      "IT",
+      "AI&DS"
+    ],
+    "eligibleYears": [
+      2,
+      3,
+      4
+    ],
+    "applicationUrl": "https://example.com/apply"
+  },
+  {
+    "id": 4,
+    "title": "Data Analytics Workshop",
+    "organization": "DataSphere",
+    "category": "Workshop",
+    "description": "This workshop introduces the fundamental concepts of cloud computing and modern cloud-based technologies. Students will learn about cloud services, deployment concepts, storage, computing resources, and basic cloud architecture. The session is designed to provide practical exposure to how applications and services can be hosted and managed using cloud platforms such as AWS and other cloud technologies.",
+    "location": "Online",
+    "deadline": "2026-09-18",
+    "skills": [
+      "Python",
+      "Data Analytics"
+    ],
+    "eligibleBranches": [
+      "CSE",
+      "IT",
+      "AI&DS",
+      "ECE"
+    ],
+    "eligibleYears": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "applicationUrl": "https://example.com/apply"
+  },
+  {
+    "id": 1788795598335,
+    "title": "Cloud Computing Workshop",
+    "organization": "CloudTech",
+    "category": "Workshop",
+    "description": "This workshop provides students with an introduction to modern web development and the technologies used to build interactive websites and web applications. Participants will learn the basic concepts of HTML, CSS, JavaScript, responsive design, and frontend development. The workshop focuses on building a strong foundation in web technologies and understanding how different frontend technologies work together to create functional and user-friendly applications.",
+    "location": "Online",
+    "deadline": "2026-09-28",
+    "skills": [
+      "Cloud Computing",
+      "AWS"
+    ],
+    "eligibleBranches": [
+      "CSE",
+      "IT"
+    ],
+    "eligibleYears": [
+      2,
+      3,
+      4
+    ],
+    "applicationUrl": "https://example.com/apply"
+  },
+  {
+    "id": 1788966122845,
+    "title": "Cyber Security Analyst Internship 2026 (UPDATED)",
+    "organization": " SecureNet Technologies",
+    "category": "Internship",
+    "description": "This Cyber Security Analyst Internship provides students with practical exposure to security monitoring, vulnerability assessment, network security and basic incident response. Interns will learn how organizations identify common security threats and protect applications, networks and sensitive information. The program is suitable for students interested in ethical hacking, cyber security and information security who want to develop practical skills through real-world security tasks.",
+    "location": "Chennai / Hybrid",
+    "deadline": "25/09/2026",
+    "skills": [
+      "Cyber Security",
+      "Network Security",
+      "Ethical Hacking",
+      "Linux",
+      "Problem Solving"
+    ],
+    "eligibleBranches": [
+      "CYBER SECURITY"
+    ],
+    "eligibleYears": [
+      3,
+      4
+    ],
+    "applicationUrl": "https://example.com/cyber-security-internship"
+  }
+]

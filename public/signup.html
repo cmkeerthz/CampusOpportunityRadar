@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Create Student Account</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <main class="auth-page">
+
+        <section class="auth-card">
+
+            <p class="eyebrow">CAMPUS OPPORTUNITY RADAR</p>
+
+            <h1>Create Student Account</h1>
+
+            <p class="auth-subtitle">
+                Create your profile to discover opportunities that match you.
+            </p>
+
+            <form id="signupForm">
+
+                <label>
+                    Full Name
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your full name"
+                    required
+                >
+
+                <label>
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="24ad057@kpriet.ac.in or your personal email"
+                    required
+                >
+
+                <label>
+                    Password
+                </label>
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Create a password"
+                    required
+                >
+
+                <label>
+                    Confirm Password
+                </label>
+
+                <input
+                    type="password"
+                    id="confirmPassword"
+                    placeholder="Re-enter your password"
+                    required
+                >
+
+                <label>
+                    Branch
+                </label>
+
+                <select id="branch" required>
+                    <option value="">Select branch</option>
+                    <option value="CSE">CSE</option>
+                    <option value="IT">IT</option>
+                    <option value="AI&DS">AI & DS</option>
+                    <option value="ECE">ECE</option>
+                    <option value="EEE">EEE</option>
+                </select>
+
+                <label>
+                    Year
+                </label>
+
+                <select id="year" required>
+                    <option value="">Select year</option>
+                    <option value="1">1st Year</option>
+                    <option value="2">2nd Year</option>
+                    <option value="3">3rd Year</option>
+                    <option value="4">4th Year</option>
+                </select>
+
+                <label>
+                    Skills
+                </label>
+
+                <input
+                    type="text"
+                    id="skills"
+                    placeholder="JavaScript, Python, React"
+                >
+
+                <label>
+                    Interests
+                </label>
+
+                <input
+                    type="text"
+                    id="interests"
+                    placeholder="AI, Web Development, Cybersecurity"
+                >
+
+                <button type="submit">
+                    Create Account
+                </button>
+
+                <p id="signupMessage"></p>
+
+            </form>
+
+            <div class="auth-links">
+                <a href="user-login.html">Already have an account? Login</a>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="js/signup.js"></script>
+
+</body>
+
+</html>

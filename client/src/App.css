@@ -1,0 +1,709 @@
+
+/* ==================================================
+   1. GLOBAL STYLES
+================================================== */
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #20213a;
+  background: #ffffff;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* ==================================================
+   2. NAVIGATION BAR
+================================================== */
+
+.navbar {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  width: 100%;
+  min-height: 76px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 16px 7%;
+  border-bottom: 1px solid #eeeeF5;
+  background: #ffffff;
+}
+
+.brand {
+  flex-shrink: 0;
+  color: #252341;
+  font-size: 25px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.brand span {
+  color: #6554d9;
+}
+
+.navbar nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 12px 22px;
+}
+
+.navbar nav a {
+  color: #48475c;
+  font-size: 14px;
+  line-height: 1.5;
+  transition: color 0.2s ease;
+}
+
+.navbar nav a:hover {
+  color: #6554d9;
+}
+
+.navbar nav .signup-link {
+  padding: 11px 17px;
+  border-radius: 8px;
+  color: #ffffff;
+  background: #6554d9;
+  transition: background 0.2s ease;
+}
+
+.navbar nav .signup-link:hover {
+  color: #ffffff;
+  background: #5040bf;
+}
+
+/* ==================================================
+   3. HERO SECTION
+================================================== */
+
+.hero {
+  padding: 78px 20px 58px;
+  text-align: center;
+  background: linear-gradient(
+    180deg,
+    #f6f4ff 0%,
+    #ffffff 100%
+  );
+}
+
+.eyebrow {
+  margin: 0 0 14px;
+  color: #6554d9;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 1.6;
+}
+
+.hero h1 {
+  max-width: 1000px;
+  margin: 18px auto 20px;
+  color: #111018;
+  font-size: clamp(36px, 5vw, 58px);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -1.5px;
+}
+
+.hero h1 span {
+  display: inline-block;
+  margin-top: 5px;
+  color: #6554d9;
+}
+
+.hero-description {
+  max-width: 650px;
+  margin: 0 auto 25px;
+  color: #6b6a7c;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.primary-button {
+  display: inline-block;
+  margin-top: 4px;
+  padding: 14px 22px;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  color: #ffffff;
+  background: #6554d9;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.primary-button:hover {
+  background: #5040bf;
+  transform: translateY(-2px);
+}
+
+.primary-button:focus-visible,
+.details-link:focus-visible,
+.navbar a:focus-visible {
+  outline: 3px solid #b9afff;
+  outline-offset: 3px;
+}
+
+/* ==================================================
+   4. OPPORTUNITIES SECTION
+================================================== */
+
+.opportunities {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 45px 35px 75px;
+}
+
+.opportunities > .eyebrow {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.opportunities > h2 {
+  margin: 0 0 10px;
+  color: #252341;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.section-description {
+  max-width: 650px;
+  margin: 0 auto 24px;
+  color: #777588;
+  font-size: 15px;
+  line-height: 1.7;
+  text-align: center;
+}
+
+/* ==================================================
+   5. SEARCH AND CATEGORY FILTER
+================================================== */
+
+.filters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 0 auto 28px;
+}
+
+.filters input,
+.filters select {
+  min-height: 44px;
+  padding: 10px 14px;
+  border: 1px solid #dedbea;
+  border-radius: 8px;
+  outline: none;
+  background: #ffffff;
+  color: #34324a;
+  font-size: 14px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.filters input {
+  width: min(360px, 100%);
+}
+
+.filters select {
+  min-width: 175px;
+  cursor: pointer;
+}
+
+.filters input::placeholder {
+  color: #88869a;
+}
+
+.filters input:focus,
+.filters select:focus {
+  border-color: #6554d9;
+  box-shadow: 0 0 0 3px rgba(101, 84, 217, 0.12);
+}
+
+/* ==================================================
+   6. OPPORTUNITY GRID
+================================================== */
+
+.opportunity-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 20px;
+}
+
+/* ==================================================
+   7. OPPORTUNITY CARDS
+================================================== */
+
+.opportunity-card {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 23px;
+  border: 1px solid #e9e7f4;
+  border-radius: 15px;
+  background: #ffffff;
+  box-shadow: 0 5px 20px rgba(36, 29, 90, 0.045);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.opportunity-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 26px rgba(36, 29, 90, 0.085);
+}
+
+/* Optional category icon */
+
+.card-icon {
+  display: flex;
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+  border-radius: 12px;
+  background: #f0edff;
+  font-size: 24px;
+}
+
+/* Category badge */
+
+.category-badge {
+  display: inline-flex;
+  align-items: center;
+  margin: 0 0 13px;
+  padding: 7px 11px;
+  border-radius: 7px;
+  background: #f0edff;
+  color: #6554d9;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+/* Opportunity title */
+
+.opportunity-card h3 {
+  width: 100%;
+  margin: 0 0 12px;
+  color: #252341;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+/* Organization */
+
+.opportunity-card .organization {
+  margin: 0 0 15px;
+  color: #6554d9;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+/* Description */
+
+.opportunity-card .card-description {
+  margin: 0 0 18px;
+  color: #747286;
+  font-size: 13px;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+
+/* ==================================================
+   8. LOCATION AND DEADLINE
+================================================== */
+
+.card-meta {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid #efedf6;
+  color: #66647a;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.card-meta span {
+  overflow-wrap: anywhere;
+}
+
+/* ==================================================
+   9. APPLICATION BUTTON
+================================================== */
+
+.details-link {
+  display: block;
+  width: 100%;
+  margin-top: 15px;
+  padding: 11px 14px;
+  border-radius: 8px;
+  background: #6554d9;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+  transition: background 0.2s ease;
+}
+
+.details-link:hover {
+  background: #5040bf;
+}
+
+/* ==================================================
+   10. LOADING, EMPTY AND ERROR MESSAGES
+================================================== */
+
+.error-message {
+  margin: 20px auto;
+  color: #c0392b;
+  font-size: 14px;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.opportunities > p:not(.eyebrow):not(.section-description) {
+  line-height: 1.7;
+}
+
+/* ==================================================
+   11. FOOTER
+================================================== */
+
+.footer {
+  padding: 23px 20px;
+  border-top: 1px solid #eeeeF5;
+  color: #777588;
+  font-size: 13px;
+  line-height: 1.7;
+  text-align: center;
+}
+
+/* ==================================================
+   12. LAPTOP AND TABLET
+================================================== */
+
+@media (max-width: 1100px) {
+  .navbar {
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+
+  .navbar nav {
+    gap: 12px 16px;
+  }
+
+  .opportunities {
+    padding-right: 28px;
+    padding-left: 28px;
+  }
+
+  .opportunity-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+  }
+}
+
+@media (max-width: 800px) {
+  .navbar {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+    padding: 18px 24px;
+  }
+
+  .navbar nav {
+    justify-content: flex-start;
+    gap: 12px 18px;
+  }
+
+  .hero {
+    padding: 65px 20px 50px;
+  }
+
+  .opportunities {
+    padding: 40px 24px 60px;
+  }
+
+  .opportunity-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .opportunity-card {
+    padding: 21px;
+  }
+}
+
+/* ==================================================
+   13. MOBILE
+================================================== */
+
+@media (max-width: 520px) {
+  .navbar {
+    padding: 17px 18px;
+  }
+
+  .brand {
+    font-size: 23px;
+  }
+
+  .navbar nav {
+    gap: 11px 15px;
+  }
+
+  .navbar nav a {
+    font-size: 13px;
+  }
+
+  .navbar nav .signup-link {
+    padding: 9px 12px;
+  }
+
+  .hero {
+    padding: 58px 18px 45px;
+  }
+
+  .hero h1 {
+    margin: 16px auto;
+    font-size: clamp(33px, 8.5vw, 43px);
+    line-height: 1.22;
+    letter-spacing: -1px;
+  }
+
+  .hero-description {
+    margin-bottom: 23px;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .primary-button {
+    padding: 12px 17px;
+    font-size: 13px;
+  }
+
+  .opportunities {
+    padding: 35px 18px 45px;
+  }
+
+  .opportunities > h2 {
+    font-size: 27px;
+  }
+
+  .section-description {
+    margin-bottom: 22px;
+    font-size: 14px;
+  }
+
+  .filters {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 23px;
+  }
+
+  .filters input,
+  .filters select {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .opportunity-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .opportunity-card {
+    padding: 21px;
+  }
+
+  .opportunity-card h3 {
+    font-size: 17px;
+  }
+
+  .footer {
+    padding: 20px 16px;
+  }
+}
+
+/* ==================================================
+   14. REDUCED MOTION ACCESSIBILITY
+================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+/* Final opportunity card spacing improvements */
+
+.opportunity-grid {
+  gap: 24px;
+}
+
+.opportunity-card {
+  padding: 25px;
+}
+
+.card-icon {
+  width: 52px;
+  height: 52px;
+  margin-bottom: 18px;
+}
+
+.category-badge {
+  margin-bottom: 16px;
+}
+
+.opportunity-card h3 {
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.opportunity-card .organization {
+  margin-bottom: 17px;
+}
+
+.opportunity-card .card-description {
+  margin-bottom: 22px;
+  line-height: 1.9;
+}
+
+.card-meta {
+  gap: 10px;
+  padding-top: 17px;
+}
+
+.details-link {
+  margin-top: 18px;
+}
+
+@media (max-width: 520px) {
+  .opportunity-grid {
+    gap: 18px;
+  }
+
+  .opportunity-card {
+    padding: 22px;
+  }
+}
+
+/* Final card alignment */
+
+.opportunity-card {
+  height: 100%;
+}
+
+.opportunity-card .card-description {
+  flex-grow: 1;
+}
+
+.details-link {
+  align-self: flex-start;
+}
+
+@media (max-width: 800px) {
+  .opportunity-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .opportunity-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Fix opportunity image overflow */
+.opportunity-card {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.opportunity-image {
+  display: block;
+  width: 100%;
+  height: 150px;
+  flex: 0 0 150px;
+  margin-bottom: 18px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.opportunity-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 520px) {
+  .opportunity-image {
+    height: 180px;
+    flex-basis: 180px;
+  }
+}
